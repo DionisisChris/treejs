@@ -12,10 +12,36 @@
   "activationEvents": [],
   "main": "./extension.js",
   "contributes": {
-    "commands": [{
-      "command": "treejs.helloWorld",
-      "title": "Hello World"
-    }]
+    "commands": [
+      {
+        "command": "treejs.analyze",
+        "title": "Analyze tree"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "analyzer",
+          "title": "Analyzer",
+          "icon": "./tree.svg"
+        }
+      ]
+    },
+    "views": {
+      "analyzer": [
+        {
+          "id": "entryDir",
+          "name": "Entry directory",
+          "contextualTitle": "Select the file or directory to analyze"
+        }
+      ]
+    },
+    "viewsWelcome": [
+      {
+        "view": "entryDir",
+        "contents": "Select file or directory to create tree graph.\n[Select directory](command:treejs.analyze)"
+      }
+    ]
   },
   "scripts": {
     "lint": "eslint .",
