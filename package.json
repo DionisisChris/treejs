@@ -6,6 +6,17 @@
   "engines": {
     "vscode": "^1.96.0"
   },
+  "author": {
+    "name": "DioTheDev",
+    "email": "dionisischristogiannis@gmail.com"
+  },
+  "publisher": "DioTheDev",
+  "release": {
+    "type": "initial"
+  },
+  "readme": "README.md",
+  "license": "MIT",
+  "icon": "tree.png",
   "categories": [
     "Other"
   ],
