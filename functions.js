@@ -34,7 +34,7 @@ function getImportsThatExistFromFile(data, filesWithDirs) {
   const imports = getImportsFromFile(data);
 
   if (!imports) {
-    return;
+    return [];
   }
 
   const cleanedData = imports
@@ -55,7 +55,7 @@ function getImportsThatExistFromFile(data, filesWithDirs) {
   return cleanedData;
 }
 
-export function createTreeGraph(dir) {
+function createTreeGraph(dir) {
   let treeObj = {};
   let filesWithPath = getFilesWithPathFromDirRec(dir);
   filesWithPath.forEach((e) => {
@@ -66,3 +66,4 @@ export function createTreeGraph(dir) {
   });
   return treeObj;
 }
+exports.createTreeGraph = createTreeGraph;

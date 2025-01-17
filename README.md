@@ -1,65 +1,81 @@
-# treejs README
+# TreeJS 🌳
 
-This is the README for your extension "treejs". After writing up a brief description, we recommend including the following sections.
+TreeJS is a Visual Studio Code extension that generates interactive dependency graphs for JavaScript. Visualize your project's architecture with beautiful, navigable dependency trees powered by React Flow.
 
-## Features
+**!IMPORTANT!**\
+This is a very early version of the project. It may break or not work as intended.
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+## ✨ Features
 
-For example if there is an image subfolder under your extension project workspace:
+- **Interactive Dependency Graph**
 
-\!\[feature X\]\(images/feature-x.png\)
+  - Drag and drop nodes to customize layout
+  - Zoom and pan navigation
+  - Minimap for easy overview
+  - Switch between vertical and horizontal layouts
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+- **Smart Analysis**
 
-## Requirements
+  - Supports JavaScript, JSX files
+  - Detects ES6 imports
+  - Handles relative and absolute imports
+  - Real-time graph updates
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+- **Developer Friendly**
+  - Dark mode support
+  - Customizable graph layout
+  - Intuitive UI controls
 
-## Extension Settings
+## 📦 Installation
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+1. Open VS Code
+2. Search on the extensions for "TreeJS"
+3. Hit install
 
-For example:
+## 🚀 Quick Start
 
-This extension contributes the following settings:
+1. Open your JavaScript project in VS Code
+2. Click the TreeJS icon in the activity bar
+   - Or press `Ctrl+Shift+P` / `Cmd+Shift+P` and type "Analyze tree"
+3. Select a directory to analyze
+4. Explore your project's dependency graph!
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+## 🤝 Contributing
 
-## Known Issues
+Contributions are welcome! Here's how you can help:
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+1. Fork the repository
+2. Create a feature branch
+   ```bash
+   git checkout -b feature/amazing-feature
+   ```
+3. Commit your changes
+   ```bash
+   git commit -m 'Add amazing feature'
+   ```
+4. Push to your branch
+   ```bash
+   git push origin feature/amazing-feature
+   ```
+5. Open a Pull Request
 
-## Release Notes
-
-Users appreciate release notes as you update your extension.
+## 📝 Release Notes
 
 ### 1.0.0
 
-Initial release of ...
+- Initial release
+- Basic dependency visualization
+- JS/JSX file support
 
-### 1.0.1
+## 🙏 Acknowledgments
 
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
+- [React Flow](https://reactflow.dev/) - Interactive node-based UI library
+- [dagre](https://github.com/dagrejs/dagre) - Graph layout algorithm
+- [VS Code Extension API](https://code.visualstudio.com/api) - Extension development framework
+- [Claude.ai](https://claude.ai/new) - General assistance and help with boring staff like this Readme...
 
 ---
 
-## Working with Markdown
+**Made with ❤️ by DioTheDev**
 
-You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+[Report Bug](https://github.com/DionisisChris/treejs/issues) · [Request Feature](https://github.com/DionisisChris/treejs/issues)
