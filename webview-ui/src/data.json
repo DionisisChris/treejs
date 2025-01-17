@@ -1,0 +1,174 @@
+{
+    "App.js": {
+        "0": "home.js",
+        "1": "login.js",
+        "2": "Layout.js",
+        "3": "RequireAuth.js",
+        "4": "NotRequireAuth.js",
+        "5": "useAuth.js"
+    },
+    "SingIn.js": {
+        "0": "axios.js",
+        "1": "useAuth.js",
+        "2": "useResponse.js",
+        "3": "SignInDir.js"
+    },
+    "index.js": {
+        "0": "App.js",
+        "1": "AuthProvider.js",
+        "2": "ResponseProvider.js"
+    },
+    "axios.js": {
+        "0": "axios.js"
+    },
+    "AuthProvider.js": {},
+    "ResponseProvider.js": {},
+    "useAuth.js": {
+        "0": "AuthProvider.js"
+    },
+    "useAxiosPrivate.js": {
+        "0": "axios.js",
+        "1": "useRefreshToken.js",
+        "2": "useAuth.js"
+    },
+    "useRefreshToken.js": {},
+    "useResponse.js": {
+        "0": "ResponseProvider.js"
+    },
+    "home.js": {
+        "0": "Dashboard.js"
+    },
+    "login.js": {
+        "0": "SingIn.js"
+    },
+    "Dialog.js": {
+        "0": "useAuth.js"
+    },
+    "DialogUn.js": {
+        "0": "useAuth.js"
+    },
+    "Directory.js": {
+        "0": "useAuth.js",
+        "1": "ExportToExcel.js"
+    },
+    "Directory2.js": {
+        "0": "useAuth.js",
+        "1": "ExportToExcel.js",
+        "2": "Dialog.js"
+    },
+    "ExportToExcel.js": {
+        "0": "useAuth.js"
+    },
+    "SignInDir.js": {
+        "0": "functions.js",
+        "1": "axios.js",
+        "2": "DialogUn.js"
+    },
+    "datePicker.js": {},
+    "Layout.js": {},
+    "NotRequireAuth.js": {
+        "0": "useAuth.js"
+    },
+    "RequireAuth.js": {
+        "0": "useAuth.js"
+    },
+    "loginInfo.js": {
+        "0": "useAuth.js",
+        "1": "useAxiosPrivate.js",
+        "2": "useResponse.js"
+    },
+    "RegisterUsers.js": {
+        "0": "useAuth.js",
+        "1": "fileUploader.js",
+        "2": "fileUploaderUpdate.js",
+        "3": "useAxiosPrivate.js",
+        "4": "useResponse.js"
+    },
+    "fileUploader.js": {
+        "0": "useAuth.js",
+        "1": "useAxiosPrivate.js",
+        "2": "useResponse.js"
+    },
+    "fileUploaderUpdate.js": {
+        "0": "useAuth.js",
+        "1": "useAxiosPrivate.js",
+        "2": "useResponse.js"
+    },
+    "RegisterAdmin.js": {
+        "0": "useAuth.js",
+        "1": "useAxiosPrivate.js",
+        "2": "useResponse.js"
+    },
+    "ResetPassword.js": {
+        "0": "useAuth.js",
+        "1": "useAxiosPrivate.js",
+        "2": "useResponse.js"
+    },
+    "Statistics.js": {
+        "0": "useAxiosPrivate.js"
+    },
+    "dateRange.js": {},
+    "dateRange2.js": {},
+    "stepper.js": {
+        "0": "FirstTab.js",
+        "1": "SecondTab.js",
+        "2": "ThirdTab.js",
+        "3": "axios.js",
+        "4": "useAuth.js",
+        "5": "useAxiosPrivate.js",
+        "6": "useResponse.js"
+    },
+    "Dashboard.js": {
+        "0": "stepper.js",
+        "1": "loginInfo.js",
+        "2": "useAuth.js",
+        "3": "RegisterUsers.js",
+        "4": "RegisterAdmin.js",
+        "5": "Directory2.js",
+        "6": "functions.js",
+        "7": "useAxiosPrivate.js",
+        "8": "InformationDialog.js",
+        "9": "ResetPassword.js"
+    },
+    "InformationDialog.js": {
+        "0": "useResponse.js"
+    },
+    "FirstTab.js": {
+        "0": "PersonalInfo.js"
+    },
+    "PersonalInfo.js": {
+        "0": "useAuth.js",
+        "1": "datePicker.js"
+    },
+    "BachelorsInfo.js": {
+        "0": "useAuth.js",
+        "1": "datePicker.js"
+    },
+    "MastersInfo.js": {
+        "0": "useAuth.js",
+        "1": "datePicker.js"
+    },
+    "PhdsInfo.js": {
+        "0": "useAuth.js",
+        "1": "datePicker.js"
+    },
+    "SecondTab.js": {
+        "0": "BachelorsInfo.js",
+        "1": "MastersInfo.js",
+        "2": "PhdsInfo.js"
+    },
+    "ContactInfo.js": {
+        "0": "CountrySelect.js",
+        "1": "useAuth.js"
+    },
+    "CountrySelect.js": {
+        "0": "useAuth.js"
+    },
+    "MiscInfo.js": {
+        "0": "useAuth.js"
+    },
+    "ThirdTab.js": {
+        "0": "ContactInfo.js",
+        "1": "MiscInfo.js"
+    }
+}
