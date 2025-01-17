@@ -17,6 +17,10 @@
   "readme": "README.md",
   "license": "MIT",
   "icon": "tree.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DionisisChris/treejs.git"
+  },
   "categories": [
     "Other"
   ],
