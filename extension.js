@@ -17,7 +17,7 @@ function activate(context) {
           canSelectMany: false,
         })
         .then((uri) => {
-          const folderPath = uri[0].path;
+          const folderPath = uri[0].fsPath;
           const initialData = createTreeGraph(folderPath);
 
           // Create and show panel

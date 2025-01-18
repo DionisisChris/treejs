@@ -61,11 +61,15 @@ Contributions are welcome! Here's how you can help:
 
 ## 📝 Release Notes
 
-### 1.0.0
+### 0.0.1
 
 - Initial release
 - Basic dependency visualization
 - JS/JSX file support
+
+### 0.0.2
+
+- Bug fix
 
 ## 🙏 Acknowledgments
 

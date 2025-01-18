@@ -2,7 +2,7 @@
   "name": "treejs",
   "displayName": "TreeJS",
   "description": "A tool used to create dependency tree graphs",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.96.0"
   },
