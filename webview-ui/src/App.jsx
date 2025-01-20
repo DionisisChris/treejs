@@ -1,4 +1,4 @@
-import { useCallback } from "react";
+import { useCallback, useState, useEffect } from "react";
 import {
   ReactFlow,
   Panel,
@@ -12,6 +12,8 @@ import {
 } from "@xyflow/react";
 import "@xyflow/react/dist/style.css";
 import dagre from "@dagrejs/dagre";
+import SearchBox from "./components/SearchBox";
+import FilterMenu from "./components/FilterMenu";
 
 const data = window.initialData;
 const initialNodes = getIntialNodes();
@@ -106,9 +108,32 @@ function getIntialEdges() {
   return edges;
 }
 
+function searchNodes(query, filters) {
+  return initialNodes.filter((node) => {
+    const matchesSearch = node.id.includes(query);
+    const matchesFilters = applyFilters(node, filters);
+    return matchesSearch && matchesFilters;
+  });
+}
+
+function applyFilters(node, filters) {
+  return filters.every((filter) => {
+    if (filter.type === "file") {
+      return node.id.endsWith(filter.value);
+    }
+    if (filter.type === "import") {
+      return node.data.importType === filter.value;
+    }
+    return true;
+  });
+}
+
 export default function App() {
   const [nodes, setNodes, onNodesChange] = useNodesState(layoutedNodes);
   const [edges, setEdges, onEdgesChange] = useEdgesState(layoutedEdges);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [filters, setFilters] = useState([]);
+  const [highlightedNodes, setHighlightedNodes] = useState([]);
 
   const onConnect = useCallback(
     (params) =>
@@ -132,8 +157,27 @@ export default function App() {
     [nodes, edges]
   );
 
+  const handleSearch = (query) => {
+    setSearchQuery(query);
+  };
+
+  const handleFilterChange = (newFilters) => {
+    setFilters(newFilters);
+  };
+
+  useEffect(() => {
+    const matchingNodes = searchNodes(searchQuery, filters);
+    setHighlightedNodes(matchingNodes.map((node) => node.id));
+  }, [searchQuery, filters]);
+
+  const handleKeyDown = (event) => {
+    if (event.key === "ArrowDown") {
+      // Implement navigation logic
+    }
+  };
+
   return (
-    <div style={{ width: "100vw", height: "100vh" }}>
+    <div style={{ width: "100vw", height: "100vh" }} onKeyDown={handleKeyDown}>
       <ReactFlow
         nodes={nodes}
         edges={edges}
@@ -149,6 +193,17 @@ export default function App() {
         <Panel position="top-right">
           <button onClick={() => onLayout("TB")}>vertical layout</button>
           <button onClick={() => onLayout("LR")}>horizontal layout</button>
+          <SearchBox
+            placeholder="Search nodes..."
+            onSearch={handleSearch}
+          />
+          <FilterMenu
+            filters={[
+              { label: 'JS Files', type: 'file', value: 'js' },
+              { label: 'Internal Imports', type: 'import', value: 'internal' }
+            ]}
+            onFilterChange={handleFilterChange}
+          />
         </Panel>
         <Background variant="dots" gap={12} size={1} />
       </ReactFlow>
